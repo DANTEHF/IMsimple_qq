@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/head_panel_layout" />
+
+    <EditText
+        android:id="@+id/et_find_text"
+
+        android:hint="输入用户账号添加好友"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:layout_below="@+id/head_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Search"
+        android:textSize="45px"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+
+    <Button
+        android:text="确认添加"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addFriend_btn"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/et_addfrd_msg"
+        />
+
+    <EditText
+        android:id="@+id/et_addfrd_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="这里输入您的请求附言"
+        android:gravity="center"
+        android:layout_below="@+id/et_find_text"
+        android:layout_alignLeft="@+id/et_find_text"
+        android:layout_alignStart="@+id/et_find_text"
+        android:layout_marginTop="20dp"/>
+
+
+</RelativeLayout>

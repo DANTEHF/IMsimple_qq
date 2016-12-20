@@ -11,6 +11,10 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        ndk {
+            //设置支持的SO库架构
+            abiFilters "armeabi-v7a", "x86","arm64-v8a","x86_64"
+        }
     }
     buildTypes {
         release {
@@ -31,6 +35,10 @@ dependencies {
     compile 'com.android.support:design:23.4.0'
     testCompile 'junit:junit:4.12'
     compile files('libs/picasso-2.5.2.jar')
+    // 添加依赖。注意，版本号必须一致。
+    // 基础功能 (必需)
 
-    compile files('libs/asmack.jar')
+    compile files('libs/nim-basesdk-3.2.0.jar')
+    compile files('libs/cosinesdk.jar')
+    compile files('libs/nim-chatroom-3.2.0.jar')
 }

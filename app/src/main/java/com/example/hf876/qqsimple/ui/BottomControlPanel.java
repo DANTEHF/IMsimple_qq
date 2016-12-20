@@ -124,18 +124,18 @@ public class BottomControlPanel extends RelativeLayout implements View.OnClickLi
         }
         int paddingLeft = getPaddingLeft();
         int paddingRight = getPaddingRight();
-        Log.i("yanguoqi", "paddingLeft = " + paddingLeft + " paddingRight = " + paddingRight);
+
         int width = right - left;
         int height = bottom - top;
-        Log.i("yanguoqi", "width = " + width + " height = " + height);
+        Log.i("Panel", "width = " + width + " height = " + height);
         int allViewWidth = 0;
         for(int i = 0; i< n; i++){
             View v = getChildAt(i);
-           Log.i("yanguoqi", "v.getWidth() = " + v.getWidth());
+           Log.i("Panel", "v.getWidth() = " + v.getWidth());
             allViewWidth += v.getWidth();
         }
         int blankWidth = (width - allViewWidth - paddingLeft - paddingRight) / (n - 1);
-        Log.i("yanguoqi", "blankV = " + blankWidth );
+        Log.i("Panel", "blankV = " + blankWidth );
 
         LayoutParams params1 = (LayoutParams) viewList.get(1).getLayoutParams();
         params1.leftMargin = blankWidth;

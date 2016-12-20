@@ -6,13 +6,24 @@
 
 
 
-
-    <ListView
-        android:id="@+id/listview_message"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:divider="@color/divider_color"
-        android:dividerHeight="1dip">
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
 
-    </ListView>
+        <ImageView
+            android:layout_width="100pt"
+            android:layout_height="100pt"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/cat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="说明: 1 无注册;  2 这里可放置listview;  3 联系人界面点击可以聊天;  4 没有自己的appServer，直接基于网易云信实现;  5 这只是个小demo "
+            android:textSize="16sp" />
+    </LinearLayout>
 </RelativeLayout>

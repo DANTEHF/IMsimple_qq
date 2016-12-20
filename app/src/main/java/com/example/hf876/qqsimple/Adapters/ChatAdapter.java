@@ -1,6 +1,7 @@
 package com.example.hf876.qqsimple.Adapters;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,11 +9,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.example.hf876.qqsimple.Constants.Constants;
 import com.example.hf876.qqsimple.R;
 import com.example.hf876.qqsimple.ui.ChatModel;
 import com.example.hf876.qqsimple.ui.ItemModel;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.msg.MessageBuilder;
+import com.netease.nimlib.sdk.msg.MsgService;
+import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
+import com.netease.nimlib.sdk.msg.model.IMMessage;
 import com.squareup.picasso.Picasso;
 
 
@@ -21,22 +30,26 @@ import com.squareup.picasso.Picasso;
  * Created by hf876 on 2016/12/1.
  */
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.BaseAdapter> {
-    private ArrayList<ItemModel> dataList = new ArrayList<>();
-    public void replaceAll(ArrayList<ItemModel> list) {
-        dataList.clear();
-        if (list != null && list.size() > 0) {
-            dataList.addAll(list);
-        }
+
+
+
+
+    private   ArrayList<ItemModel> dataList;
+
+    public ChatAdapter(ArrayList<ItemModel> list) {
+
+        dataList=list;
+
+    }
+
+
+
+    public void addChatDataToAdapter(ItemModel itemModel){
+        dataList.add(itemModel);
         notifyDataSetChanged();
     }
 
-    public void addAll(ArrayList<ItemModel> list) {
-        if (dataList != null && list != null) {
-            dataList.addAll(list);
-            notifyItemRangeChanged(dataList.size(),list.size());
-        }
 
-    }
 
     @Override
     public ChatAdapter.BaseAdapter onCreateViewHolder(ViewGroup parent, int viewType) {

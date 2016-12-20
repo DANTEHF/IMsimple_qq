@@ -20,9 +20,8 @@ import com.example.hf876.qqsimple.R;
 public class MessageFragment extends BaseFragment {
     private static final String TAG = "MessageFragment";
     private MainActivity mMainActivity ;
-    private ListView mListView;
-  //  private MessageAdapter mMsgAdapter;
- //   private List<MessageBean> mMsgBean = new ArrayList<MessageBean>();
+    //  private ListView mListView;
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View messageLayout = inflater.inflate(R.layout.message_layout,
@@ -30,20 +29,18 @@ public class MessageFragment extends BaseFragment {
         Log.d(TAG, "onCreateView---->");
         mMainActivity = (MainActivity) getActivity();
         mFragmentManager = getActivity().getFragmentManager();
-        mListView = (ListView)messageLayout.findViewById(R.id.listview_message);
- //       mMsgAdapter = new MessageAdapter(mMsgBean, mMainActivity);
-  //      mListView.setAdapter(mMsgAdapter);
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                // TODO Auto-generated method stub
-//                Toast.makeText(mMainActivity, mMsgBean.get(position).toString(),
-//                        Toast.LENGTH_SHORT).show();
-            }
-
-        });
+//        mListView = (ListView)messageLayout.findViewById(R.id.listview_message);
+//
+//        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view,
+//                                    int position, long id) {
+//                // TODO Auto-generated method stub
+//
+//            }
+//
+//        });
         return messageLayout;
     }
 
@@ -60,15 +57,7 @@ public class MessageFragment extends BaseFragment {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         Log.e(TAG, "onCreate------");
-//        mMsgBean.add(new MessageBean(R.drawable.ic_photo_1, "张三", "吃饭没?", "昨天"));
-//        mMsgBean.add(new MessageBean(R.drawable.ic_photo_2, "李四", "哈哈", "昨天"));
-//        mMsgBean.add(new MessageBean(R.drawable.ic_photo_3, "小明", "吃饭没?", "昨天"));
-//        mMsgBean.add(new MessageBean(R.drawable.ic_photo_4, "王五", "吃饭没?", "昨天"));
-//        mMsgBean.add(new MessageBean(R.drawable.ic_photo_5, "Jack", "吃饭没?", "昨天"));
-//        mMsgBean.add(new MessageBean(R.drawable.ic_photo_6, "Jone", "吃饭没?", "昨天"));
-//        mMsgBean.add(new MessageBean(R.drawable.ic_photo_7, "Jone", "吃饭没?", "昨天"));
-//        mMsgBean.add(new MessageBean(R.drawable.ic_photo_8, "Jone", "吃饭没?", "昨天"));
-//        mMsgBean.add(new MessageBean(R.drawable.ic_photo_9, "Jone", "吃饭没?", "昨天"));
+
     }
 
     @Override

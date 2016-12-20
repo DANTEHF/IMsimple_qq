@@ -1,9 +1,12 @@
 package com.example.hf876.qqsimple.ui;
 
+import android.media.Image;
+
+
 import java.io.Serializable;
 
 public class ChatModel implements Serializable{
-    private String icon="";
+    private String icon;
     private String content="";
     private String type="";
 
@@ -30,4 +33,6 @@ public class ChatModel implements Serializable{
     public void setType(String type) {
         this.type = type;
     }
+
+
 }
